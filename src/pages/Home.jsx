@@ -1,4 +1,5 @@
-import { useState } from "react"
+
+import { useState,useEffect } from "react"
 import CardUno from "../components/CardUno"
 import Carousel from "../components/Carousel"
 
@@ -7,7 +8,7 @@ import Carousel from "../components/Carousel"
 export default function Home() {
 
 
-
+ 
   let data = [
     { id: 'america1', city: "Cancun", photo: "/img/america/cancun.jpg" },
     { id: 'america2', city: "New York", photo: "/img/america/newyork.jpg" },
@@ -26,16 +27,30 @@ export default function Home() {
     { id: 'oceania3', city: "Suva", photo: "/img/oceania/suva.jpg" },
     { id: 'oceania4', city: "Wellington", photo: "/img/oceania/wellington.jpg" }
   ]
+
+ 
   return (
 
-    <main className='grow flex flex-row items-center  px-10 '>
+    <main className='flex grow  items-center  px-10 '>
 
+      <div class=" flex col flex-wrap items-justify justify-left mt-2">
 
+        <div class="container text-center">
 
-      <CardUno />
+          <div class="row ">
 
-      <Carousel data={data} />
+            <div class="col-sm-6 col-md-5 col-lg-6">
+              <CardUno />
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-6">
+              <h2 class="text-[25px] justify-center"><em>Popular MyTineraries</em></h2>
+              <Carousel data={data} />
+            </div>
 
+          </div>
+        </div>
+
+      </div>
 
     </main>
 
