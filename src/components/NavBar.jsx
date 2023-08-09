@@ -1,4 +1,4 @@
-
+import Login from "./Login"
 
 export default function NavBar() {
   return (
@@ -27,10 +27,7 @@ export default function NavBar() {
             <ul class="hidden md:flex items-center justify-between text-base text-line-height: 2rem pt-4 ">
                   <li><a class="inline-block no-underline hover:text-black font-bold text-lg px-4 lg:-ml-2" href="#">Home</a></li>
                   <li><a class="inline-block no-underline hover:text-black font-bold text-lg px-4 lg:-ml-2" href="#">Cities</a></li>
-                 <li><button class="bg-blue-600 text-gray-200 justify-between font-bold text-lg  p-2 rounded  hover:bg-blue-500 hover:text-gray-100">
-       
-            Login</button></li> 
-               </ul>
+                       <li><button type="button" className="bg-blue-600 px-5 py-2 font-bold text-1xl text-white rounded"> <Login/>Login</button></li>  </ul>
              
 
                 </nav>

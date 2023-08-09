@@ -10,7 +10,5 @@ export default function Cards({ src, alt, text, id }) {
   </div>
 </div>
 
-
-
   )
 }
