@@ -4,8 +4,9 @@ export default function Cards({ src, alt, text, id }) {
   return (
 
 
-<Anchor to='/citiesdetails' class="card text-bg-dark w-2/5 flex flex-col items-center m-2">
-  <img src={src} class="card-img " alt={alt}/>
+<Anchor to='/citiesdetails' class="card text-bg-dark  flex flex-col items-center m-2
+lg:w-2/5 ">
+  <img src={src} class="card-img " alt={alt} />
   <div class="card-img-overlay">
     <h2 class="card-titl d-flex">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">

@@ -2,13 +2,13 @@
 import { useState,useEffect } from "react"
 import CardUno from "../components/CardUno"
 import Carousel from "../components/Carousel"
-
+import Hero from "../components/Hero"
 
 
 export default function Home() {
-
-
  
+
+  
   let data = [
     { id: 'america1', city: "Cancun", photo: "/img/america/cancun.jpg" },
     { id: 'america2', city: "New York", photo: "/img/america/newyork.jpg" },
@@ -31,13 +31,16 @@ export default function Home() {
  
   return (
 
-    <main className='flex grow  items-center  px-10 '>
+
+    <main className='grow flex flex-col items-center mt-[20px] px-10 '> 
 
       <div class=" flex col flex-wrap items-justify justify-left mt-2">
 
+      <Hero/>
+    
         <div class="container text-center">
 
-          <div class="row ">
+          <div class="row justify-center ">
 
             <div class="col-sm-6 col-md-5 col-lg-6">
               <CardUno />
@@ -53,6 +56,8 @@ export default function Home() {
       </div>
 
     </main>
+
+
 
   )
 }
