@@ -12,7 +12,10 @@ export default function CitiesBodyLayout({ data, fx, text }) {
           data.map((each, index) => <CitiesCard key={index} photo={each.photo} name={each.city} id={each._id}/>)
         }  
       </div>
-      <Footer/>
+      <div>
+          <Footer/>
+          </div>
     </div>
+
   )
 }

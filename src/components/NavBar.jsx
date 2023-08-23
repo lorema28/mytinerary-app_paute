@@ -12,9 +12,12 @@ export default function NavBar() {
 
      <header lassName="flex justify-between items-center my-8 mx-40">
 
-        <div class="w-full flex items-center justify-between mt-0 px-10 py-2">
+        <div class="w-full flex items-center  justify-between mt-0 px-10 py-2">
 
-           <h2 className="font-bold text-3xl ">My Tinerary</h2>
+           <h2 className="font-bold text-3xl float right d-flex ">
+           <div>
+    
+      </div>   <img src="public\img\logo.png" alt="logo mytinerary" class="  w-7 h-7"/>  Tinerary</h2>
 
            <label for="menu-toggle" 
             class="cursor-pointer md:hidden block">

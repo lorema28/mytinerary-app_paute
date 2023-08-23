@@ -1,10 +1,10 @@
 import { Link as Anchor } from "react-router-dom"
 
-export default function Cards({ src, alt, text, _id }) {
+export default function Cards({ src, alt, text, id }) {
   return (
 
-
-    <Anchor to='/citiesdetails' class="card text-bg-white  flex flex-col items-center m-2
+ 
+    <Anchor  to={'/cityDetail/'+id}class="card text-bg-white  flex flex-col items-center m-2
 lg:w-2/5 
 ">
   

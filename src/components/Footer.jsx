@@ -7,7 +7,6 @@ export default function Footer() {
 
 
     <div class="col-md-6 text-center" >
-      
     <Anchor Anchor to={'/home/'} class="nav-item  font-bold      
     hover:text-white 
       hover:hover:text-gray-100 
