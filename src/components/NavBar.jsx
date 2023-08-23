@@ -36,9 +36,9 @@ export default function NavBar() {
                  {show ? (
                     <nav id="header" class="w-full z-30 top-10  ">
                        <ul class="hidden md:flex items-center justify-between text-base text-line-height: 2rem pt-4 ">
-                          {options.map(each => <li><Anchor key={each.to} to={each.to} class="inline-block no-underline hover:text-gray-100 font-bold text-lg px-4 lg:-ml-2" href="#">{each.title}</Anchor></li>)}
-                         <li><button type="button" className=" d-flex text-white rounded  align-items-center bg-blue-600 text-gray-200 p-2 rounded  hover:bg-blue-500 hover:text-gray-100 px-5 py-2 font-bold text-1xl ">
-                             <Login />Login</button></li>
+                          {options.map(each => <li><Anchor key={each.to} to={each.to} class="inline-block no-underline hover:text-gray-100 font-bold text-lg px-4 lg:-ml-2" href="#" target="_blank">{each.title}</Anchor></li>)}
+                         <li><Anchor type="button" className=" d-flex text-white rounded  align-items-center bg-blue-600 text-gray-200 p-2 rounded  hover:bg-blue-500 hover:text-gray-100 px-5 py-2 font-bold text-1xl" target="_blank" >
+                             <Login />Login</Anchor></li>
                        </ul>
                     </nav>
                  ) : (null)}

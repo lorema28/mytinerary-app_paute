@@ -1,38 +1,29 @@
-
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react"
 import CardUno from "../components/CardUno"
 import Carousel from "../components/Carousel"
 import Hero from "../components/Hero"
+import axios from "axios"
+import { Link as Anchor } from "react-router-dom"
+import apiUrl from '../apiUrl'
+
 
 
 export default function Home() {
- 
-
-  
-  let data = [
-    { id: 'america1', city: "Cancun", photo: "/img/america/cancun.jpg" },
-    { id: 'america2', city: "New York", photo: "/img/america/newyork.jpg" },
-    { id: 'america3', city: "Rio de Janeiro", photo: "/img/america/rioDeJaneiro.jpg" },
-    { id: 'america4', city: "Ushuaia", photo: "/img/america/ushuaia.jpg" },
-    { id: 'asia1', city: "Bangkok", photo: "/img/asia/bangkok.jpg" },
-    { id: 'asia2', city: "Pekin", photo: "/img/asia/pekin.jpg" },
-    { id: 'asia3', city: "Singapur", photo: "/img/asia/singapur.jpg" },
-    { id: 'asia4', city: "Tokyo", photo: "/img/asia/tokio.jpg" },
-    { id: 'europe1', city: "Ibiza", photo: "/img/europe/ibiza.jpg" },
-    { id: 'europe2', city: "London", photo: "/img/europe/london.jpg" },
-    { id: 'europe3', city: "Paris", photo: "/img/europe/paris.jpg" },
-    { id: 'europe4', city: "Roma", photo: "/img/europe/roma.jpg" },
-    { id: 'oceania1', city: "Majuro", photo: "/img/oceania/majuro.jpg" },
-    { id: 'oceania2', city: "Sidney", photo: "/img/oceania/sidney.jpg" },
-    { id: 'oceania3', city: "Suva", photo: "/img/oceania/suva.jpg" },
-    { id: 'oceania4', city: "Wellington", photo: "/img/oceania/wellington.jpg" }
-  ]
-
- 
-  return (
-
-
-    <main className='grow flex flex-col items-center mt-[20px] px-10 '> 
+    const [data, setData] = useState([])
+    useEffect(
+        () => {
+            axios(apiUrl+'cities/carousel')
+                .then(res => setData(res.data.data_carousel))
+                .catch(err=>console.log(err))
+        },          // callback que No debe retornar nada y NO puede ser asincrona
+        []          // array de dependencias
+                    // cuando esta vacio, EL EFECTO se ejecuta una unica vez cuando se monta el componente
+                    // cuando tiene variables de dependencias, EL EFECTO se ejecuta (cuando se monta y) CADA VEZ que cambia alguna de esas variables
+        // [show]   // es ese ejemplo CADA VEZ que el booleano cambie, se ejecuta la callback de la linea 24
+    )
+    
+    return (
+       <main className='grow flex flex-col items-center mt-[20px] px-10 '> 
 
       <div class=" flex col flex-wrap items-justify justify-left mt-2">
 
@@ -56,8 +47,5 @@ export default function Home() {
       </div>
 
     </main>
-
-
-
-  )
+    )
 }

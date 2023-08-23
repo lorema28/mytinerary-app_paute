@@ -1,6 +1,7 @@
 import Arrow from "./Arrow"
 import Cards from "./Cards"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import apiUrl from "../apiUrl"
 
 export default function Carousel({data}) {
   let photo_from = 0
@@ -29,42 +30,40 @@ export default function Carousel({data}) {
     console.log(counter);
     console.log(counterTo);
   }
+  useEffect(
+    () => {
+        setTimeout(() => {
+            next_slide()
+        }, 5000)
+    }
+)
  
   return (
     
     
 
-    <div class="flex col justify-center items-center ">
+    <div className= "flex col justify-center items-center  ">
 
   
 
 <Arrow direction="M15.75 19.5L8.25 12l7.5-7.5" onClick={prev_slide} />
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-        
-          <div class="carousel-item active">
-            <div className="  flex flex-wrap items-center justify-center  ">
-              {data.slice(counter, counterTo).map(each => <Cards key={each.id} src={each.photo} alt={each.photo} text={each.city} />)}
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div className="  flex flex-wrap items-center justify-center  ">
-              {data.slice(4, 8).map(each => <Cards key={each.id} src={each.photo} alt={each.photo} text={each.city} />)}
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div className="  flex flex-wrap items-center justify-center  ">
-              {data.slice(8, 12).map(each => <Cards key={each.id} src={each.photo} alt={each.photo} text={each.city} />)}
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div className="  flex flex-wrap items-center justify-center  ">
-              {data.slice(12, 16).map(each => <Cards key={each.id} src={each.photo} alt={each.photo} text={each.city} />)}
-            </div>
-          </div>
-        </div>
-       
-      
+   
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div className="  flex flex-wrap items-center justify-center  ">
+        {data.slice(counter, counterTo).map((each, index) => (
+          <Cards
+            key={index}
+            src={each.photo}
+            alt={each.id}
+            text={each.city}
+            id={each.id}
+          />
+        ))}
+     </div>
+     </div>
+</div>
       </div>
       <Arrow direction="M8.25 4.5l7.5 7.5-7.5 7.5" onClick={next_slide} />
      

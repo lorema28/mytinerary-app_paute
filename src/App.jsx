@@ -1,16 +1,21 @@
 import Home from "./pages/Home"
-import NavLayaout from "./layouts/NavLayaout"
+import NavLayout from "./layouts/NavLayout"
 import { RouterProvider } from "react-router-dom"
 import router from "./Router"
+import { useState } from 'react'
+
+
 
 function App() {
 
+  const [count, setCount] = useState(0)
 
   return (
-    /* <NavLayaout>
+    
+    /* <NavLayout>
        <Home />
  
-     </NavLayaout>*/
+     </NavLayout>*/
     <RouterProvider router={router} />
 
   )
