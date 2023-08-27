@@ -1,6 +1,7 @@
-import axios from 'axios';
+
 import React, { useState, useEffect, useRef } from 'react'
-import apiUrl from '../apiUrl';
+import Lupa from './Lupa'
+
 
 
 export default function Searchbar({ handle, text }) {
@@ -28,7 +29,8 @@ export default function Searchbar({ handle, text }) {
 
   return (
     <div className='flex justify-center items-center p-6 '>
-      <input ref={text} type="text" placeholder='Search your city' name="text"  id="text" onKeyUp={handle} className='border-2 rounded-lg'/>
+<Lupa/>
+      <input ref={text} type="text" placeholder= 'Search your city' name=" "  id="" onKeyUp={handle} className='border-2 rounded-lg'/>
     </div>
     
     

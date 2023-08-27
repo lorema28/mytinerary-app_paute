@@ -2,8 +2,8 @@ import { useState, useEffect } from "react"
 import CardUno from "../components/CardUno"
 import Carousel from "../components/Carousel"
 import Hero from "../components/Hero"
+
 import axios from "axios"
-import { Link as Anchor } from "react-router-dom"
 import apiUrl from '../apiUrl'
 
 
@@ -23,9 +23,11 @@ export default function Home() {
     )
     
     return (
+      
+
        <main className='grow flex flex-col items-center mt-[20px] px-10 '> 
 
-      <div class=" flex col flex-wrap items-justify justify-left mt-2">
+      <div class=" flex col flex-wrap justify-left mt-2">
 
       <Hero/>
     
@@ -47,5 +49,6 @@ export default function Home() {
       </div>
 
     </main>
+
     )
 }

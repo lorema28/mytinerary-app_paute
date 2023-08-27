@@ -1,6 +1,7 @@
 import React, { useState,useEffect, useRef } from 'react'
 import CitiesBanner from '../components/CitiesBanner'
 import CitiesBodyLayout from '../layouts/CitiesBodyLayout'
+
 import axios from 'axios'
 import apiUrl from '../apiUrl'
 
@@ -28,15 +29,22 @@ export default function Cities() {
   }
 
   return (
-    <main className='grow flex flex-col items-center mt-[20px] px-10 '> 
+
+
+
+    <main > 
        <CitiesBanner />
-    <div className="flex flex-col h-[100vh] w-[100vw]">
+    <div className="flex flex-col  ">
    
-      <CitiesBodyLayout data={data} fx={handleFilter} text={text}/>
+      <CitiesBodyLayout 
+      data={data} 
+      fx={handleFilter} 
+      text={text}/>
 
     </div>
   
     </main>
+
   )
 }
 
