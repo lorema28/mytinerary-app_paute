@@ -1,34 +1,30 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import apiUrl from '../apiUrl';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useDispatch,useSelector } from 'react-redux'
+import city_actions from '../store/actions/cities'
+const { read_city } = city_actions
 import { Link as Anchor } from 'react-router-dom';
 
 
 
 
-export default function CityDetail () {
-
-  const {city_id } = useParams()
-  const [city, setCity] = useState([]);
-
-  useEffect(()=>{
-      console.log(city_id)
-      axios(apiUrl + 'cities/' + city_id)
-   
-      .then(res=> { setCity(res.data.response)
- })  
-      .catch(err => { console.log(err) })
-    },[])
-    console.log(city)
+export default function CityDetail() {
+    const { city_id } = useParams()
+    const dispatch = useDispatch()
+    const city = useSelector(store => store.cities.city)
+    console.log(city);
+    useEffect(
+        () => { dispatch(read_city({ id: city_id })) },
+        []
+    )
     return (
         <div className=" min-h-screen lg:mx-20 mt-20 flex flex-col items-center">
 
             <div className="self-center ">
-            <h1 className="text-[24px] font-semibold justify-content text-center">{city.city}</h1>
-            <img src={city.photo} alt= {city.text} className="my-5 shadow-lg" />
+                <h1 className="text-[24px] font-semibold justify-content text-center">{city.city}</h1>
+                <img src={city.photo} alt={city.text} className="my-5 shadow-lg" />
                 <p><em>{city.description}</em></p>
-    
+
             </div>
 
             <Anchor to='/cities' className="mt-10">

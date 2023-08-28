@@ -1,13 +1,14 @@
 
 import { RouterProvider } from "react-router-dom"
 import router from "./Router"
-import { useState } from 'react'
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 
 
 function App() {
 
-  const [count, setCount] = useState(0)
+
 
   return (
     
@@ -15,7 +16,9 @@ function App() {
        <Home />
  
      </NavLayout>*/
+     <Provider store={store}>
     <RouterProvider router={router} />
+    </Provider>
 
   )
 
