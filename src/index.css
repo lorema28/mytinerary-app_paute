@@ -8,3 +8,23 @@
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   }
+
+  #root {
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI';
+    
+  }
+  
+  .header{
+    box-shadow: 0px 1px 20px 0px rgba(32,53,90,.1);
+  }
+
+  .img:hover {
+    transition: 0.5s;
+    transform: scale(95%);
+    cursor: pointer;
+  }

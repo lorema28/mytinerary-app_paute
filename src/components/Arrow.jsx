@@ -11,7 +11,7 @@ export default function Arrow({direction,onClick}) {
       viewBox="0 0 24 24" 
       strokeWidth={1.5} 
       stroke="currentColor" 
-      className="w-[40px] h-[40px] cursor-pointer" 
+      className=" w-[40px] h-[40px] cursor-pointer" 
       onClick={onClick}
       >
   <path strokeLinecap="round" strokeLinejoin="round" d={direction}/>

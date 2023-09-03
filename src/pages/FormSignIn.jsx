@@ -3,7 +3,7 @@ import { Link as Anchor } from "react-router-dom";
 //import axios from "axios";
 //import apiUrl from "../apiUrl";
 
-export default function Form() {
+export default function SignIn() {
   const mail_signin = useRef("");
   const password_signin = useRef("");
 
@@ -15,28 +15,29 @@ export default function Form() {
     console.log(data);
   }
   return (
-    <form className="flex flex-col grow justify-evenly items-center w-4/5">
+    <form className="flex flex-col items-center lg:p-[20px] w-[360px] justify-center  bg-white m-auto">
+      <h1 className="text-[36px] font-bold text-center mb-[10px]">Sign In!</h1>
       <input
         ref={mail_signin}
         type="text"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 "
         name="mail_signin"
         id="mail_signin"
         defaultValue=""
-        placeholder="Type Mail"
+        placeholder="Type Mail*"
       />
       <input
         ref={password_signin}
         type="password"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 "
         name="password_signin"
         id="password_signin"
         defaultValue=""
-        placeholder="Type Password"
+        placeholder="Type Password*"
       />
       <input
         type="button"
-        className="bg-red-400 text-white w-4/5 py-4 text-center cursor-pointer"
+        className="mb-[10px] w-full shadow  bg-blue-600  hover:bg-blue-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
         value="Sign In!"
         onClick={handleSignIn}
       />
@@ -44,9 +45,9 @@ export default function Form() {
         Don't you have an account?{" "}
         <Anchor
           className="text-[20px] font-bold text-red-800 cursor-pointer"
-          to='/auth/signup'
+          to={"/auth/signup" }
         >
-          Sign up
+          Sign up!
         </Anchor>
       </p>
     </form>

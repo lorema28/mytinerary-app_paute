@@ -2,7 +2,7 @@
 
 export default function NavLayout({children}) {
   return (
-    <div className='  flex flex-col'>
+    <div className="w-full min-h-screen flex flex-col">
 
     
       {children}

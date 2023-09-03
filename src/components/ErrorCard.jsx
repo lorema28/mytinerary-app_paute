@@ -1,11 +1,11 @@
-export default function ErrorCard() {
+export default function ErrorCard({search}) {
     return (
-        <div className="w-full min-h-screen bg-[url('/pageNotFound.jpg')] bg-cover flex justify-center">
-            <div className="my-80 text-center text-gray-300">
+      
+            <div className="text-center text-gray-300">
             <img src="public\img\404 Error-bro.svg" alt="404 Error" />
-                <h1 className="text-[48px] font-semibold">404 Error</h1>
+                <h1 className="text-[48px] font-semibold">404 Error<span>{search}</span></h1>
                 <p className="text-[24px]">OOPS!!City not found, please try another city.</p>
             </div>
-        </div>
+
     )
 }

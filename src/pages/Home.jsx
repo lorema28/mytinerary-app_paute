@@ -9,8 +9,7 @@ const { read_carousel } = city_actions
 
 
 export default function Home() {
-  const [show,setShow] = useState(true)
-  const [data, setData] = useState([])
+
     const carousel = useSelector(store=>store.cities.carousel)
     const dispatch = useDispatch()
    
@@ -30,30 +29,35 @@ export default function Home() {
     return (
       
 
-       <main className='grow flex flex-col items-center mt-[20px] px-10 '> 
-
-      <div class=" flex col flex-wrap justify-left mt-2">
-
-      <Hero/>
+      <main className='grow flex flex-col items-center mt-[20px] mb-[20px]  px-10
     
-        <div class="container text-center">
+      sm: px-0 '>
 
-          <div class="row justify-center ">
+        <div class=" flex col flex-wrap justify-left mt-2 
+        ">
 
-            <div class="col-sm-6 col-md-5 col-lg-6">
-              <CardUno />
+          <Hero />
+
+          <div class="container text-center">
+
+            <div class="row justify-center ">
+
+              <div className='col-sm-12 col-md-12 col-lg-5 '>
+                <CardUno />
+              </div>
+
+              <div className="col-sm-12 col-md-12 col-lg-7 ">
+             
+                <h2 class="text-[25px] justify-center font-bold"><em>Popular MyTineraries</em></h2>
+                <Carousel data={carousel} />
+              </div>
+
             </div>
-            <div class="col-sm-6 col-md-5 col-lg-6">
-              <h2 class="text-[25px] justify-center"><em>Popular MyTineraries</em></h2>
-              <Carousel data={carousel} />
-            </div>
-
           </div>
+
         </div>
 
-      </div>
-
-    </main>
+      </main>
 
     )
 }

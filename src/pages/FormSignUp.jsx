@@ -30,65 +30,65 @@ export default function Form() {
     }
   }
   return (
-    <form class=" flex flex-col grow justify-evenly items-center w-4/5">
-   
+    <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white m-auto">
+   <h1 className="text-[36px] font-bold text-center mb-[10px]">Sign Up!</h1>
       <input
         ref={name}
         type="text"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         name="name"
         id="name"
         defaultValue=""
-        placeholder="Type Name"
+        placeholder="Type Name*"
       />
       <input
         ref={lastName}
         type="text"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         name="lastName"
         id="lastName"
         defaultValue=""
-        placeholder="Type Last Name"
+        placeholder="Type Last Name*"
       />
       <input
         ref={country}
         type="text"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         name="country"
         id="country"
         defaultValue=""
-        placeholder="Type country"
+        placeholder="Type country*"
       />
       <input
         ref={photo}
         type="text"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         name="photo"
         id="photo"
         defaultValue=""
-        placeholder="Type Photo"
+        placeholder="Type Photo*"
       />
       <input
         ref={mail}
         type="text"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         name="mail"
         id="mail"
         defaultValue=""
-        placeholder="Type Mail"
+        placeholder="Type Mail*"
       />
       <input
         ref={password}
         type="password"
-        className="w-4/5 py-4 text-center"
+        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
         name="password"
         id="password"
         defaultValue=""
-        placeholder="Type Password"
+        placeholder="Type Password*"
       />
       <input
         type="button"
-        className="bg-red-400 text-white w-4/5 py-4 text-center cursor-pointer"
+        className="mb-[10px] w-full shadow  bg-blue-600  hover:bg-blue-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
         value="Sign Up!"
         onClick={handleSignUp}
       />
@@ -98,7 +98,7 @@ export default function Form() {
           className="text-[20px] font-bold text-red-800 cursor-pointer"
           to='/auth/signin'
         >
-          Sign in
+          Sign in!
         </Anchor>
       </p>
     </form>
