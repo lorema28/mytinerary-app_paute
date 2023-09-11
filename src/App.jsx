@@ -1,27 +1,27 @@
 
+import { useEffect } from "react";
 import { RouterProvider } from "react-router-dom"
 import router from "./Router"
-import { Provider } from 'react-redux';
-import store from './store/store';
 
 
+import { useDispatch } from "react-redux";
+import user_actions from "./store/actions/users";
+const { signin_token } = user_actions;
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    let token = localStorage.getItem('token')
+    if (token) {
+      dispatch(signin_token());
+    }
+  }, []);
+  return <RouterProvider router={router} />;
+}
 
+export default App;
 
-
-  return (
-    
-    /* <NavLayout>
+  /* <NavLayout>
        <Home />
  
      </NavLayout>*/
-     <Provider store={store}>
-    <RouterProvider router={router} />
-    </Provider>
-
-  )
-
-}
-
-export default App

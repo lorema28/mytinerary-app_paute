@@ -1,12 +1,10 @@
-import React from 'react'
 
 export default function UnderConstruction() {
   return (
    
-      
         <div className="text-center text-gray-300">
-        <img src="public\img\pngegg.png" alt="underconstruction"  />
-            <p className="text-[24px]">UNDER CONSTRUCTION.</p>
+        <img src="\img\pngegg.png" alt="UNDER CONSTRUCTION" className="h-fit"  />
+            <p className="text-[24px]">SORRY! UNDER CONSTRUCTION.</p>
         </div>
 
 

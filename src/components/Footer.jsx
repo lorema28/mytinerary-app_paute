@@ -54,7 +54,7 @@ export default function Footer() {
       hover:transition
       hover:delay-100
       hover:duration-100
-      hover:ease-in-out"> <em>© 2023 By Lorena Paute😊- Mindhub</em>
+      hover:ease-in-out"> <em>© 2023 By Lorena Paute😊 | Mindhub</em>
         </div>
  
 

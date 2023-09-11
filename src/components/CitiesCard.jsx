@@ -7,7 +7,7 @@ export default function CitiesCard({ photo, name, id }) {
   return (
 
     <Anchor to={"/city/" + id} style={{ background: `url(${photo})`, backgroundSize: "cover" }}
-      className='flex bg-center bg-cover text-gray-200 rounded-lg h-[25vh] w-[30vw]
+      className='flex bg-center text-gray-200 rounded-lg h-[25vh] w-[30vw]
       shadow-lg' >
       <h2 className="d-flex text-white font-bold box-shadow-[0_5px_5px_rgba(0,0,0,1)]">
         <svg xmlns="http://www.w3.org/2000/svg"

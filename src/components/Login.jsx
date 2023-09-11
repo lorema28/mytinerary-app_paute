@@ -2,20 +2,19 @@
 
 export default function Login() {
   return (
-    <div class="d-flex float left align-items-center
-    hover:text-white 
-    hover:hover:text-gray-100 
-    hover:bg-blue-500
-    hover:transition
-    hover:delay-100
-    hover:duration-100
-    hover:ease-in-out ">
-     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+
+    <div class="d-flex float left align-items-center bg-blue-600 text-gray-200 p-2 rounded font-bold text-white ">
+     <svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24" 
+     fill="currentColor" 
+     class="w-4 h-4 ">
   <path fill-rule="evenodd" 
   d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" 
   clip-rule="evenodd" />   
 </svg>
-Login 
+
+
+<p class="ml-2">Login</p>
     </div>
   )
 }

@@ -34,7 +34,7 @@ export default function Home() {
       sm: px-0 '>
 
         <div class=" flex col flex-wrap justify-left mt-2 
-        ">
+">
 
           <Hero />
 

@@ -5,11 +5,12 @@ import NavLayout from "./layouts/NavLayout"
 import Itineraries from "./pages/Itineraries"
 import Cities from "./pages/Cities";
 import CityDetail from "./pages/CityDetail"
-import SignIn from "./pages/SignIn"
-import SignUp from "./pages/SignUp"
+import Activities from "./components/Activities"
+
 import FormSignUp from "./pages/FormSignUp"
 import FormSignIn from "./pages/FormSignIn"
 import NotFound from "./pages/Notfound";
+import Profile from "./pages/Profile"
 
 
 const router = createBrowserRouter(
@@ -24,9 +25,10 @@ const router = createBrowserRouter(
                 { path: "/home",element: <Home/>},
                 { path: "/Cities",element: <Cities/>},
                 { path: "/city/:city_id", element: <CityDetail />},
+   
+                { path: "/activities/:itinerary_id", element: <Activities />},
+                { path: "/profile", element: <Profile /> },
                 { path: "/itineraries", element: <Itineraries />},
-                { path: "/signin", element: <SignIn />},
-                { path: "/signup", element: <SignUp />},
                 { path: "/auth/signup", element: <FormSignUp /> },
                 { path: "/auth/signin", element: <FormSignIn /> },
                 { path: "/*", element: <NotFound />}

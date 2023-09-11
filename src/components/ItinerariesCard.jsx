@@ -1,45 +1,74 @@
 import { useState } from "react"
 import ItinerariesDetail from "./ItinerariesDetail"
 
+
+
 /* eslint-disable react/prop-types */
-export default function ItinerariesCard({  photo, src, alt, text, price, duration, tags, admin_id}) {
+export default function ItinerariesCard({  photo, src, alt, text, price, duration, tags, admin_id,_id}) {
     const [like, setLike] = useState(false)
     const count = 0
     const [show, setShow] = useState(false)
 
     
+    
     return (
-        <div className="w-full flex flex-col p-3 m-3 bg-white
+        <div className="bg-white border-2 rounded-lg w-100% flex flex-col p-3 m-3  
         md:w-2/3 md:p-5 md:m-5
         lg:p-6 lg:m-6">
-            <h1 className="m-2  text-[20px] font-semibold text-center">{text}</h1>
 
-            <img src={src} alt={alt} className="h-fit" />
-            <div className=" flex flex-col m-3 p-3 ">
+            <h1 className="m-2 text-[20px] font-semibold text-center ">{text}</h1>
+
+            <img src={src} alt={alt} className="h-fit " />
+            <div className=" flex flex-col my-4 ">
                 <div className="d-flex justify-around
             md:flex md:flex-row md:justify-around md:items-center">
-                    <div className="flex flex-col items-center gap-2">
-                        <h1>User:</h1>
-                        <img className="w-10 h-10 rounded-full bg-cover" src={photo} alt="User" />
-                        <p>{admin_id}❤️</p>
+                    <div className="flex flex-col items-center ">
+                        <h1 className="text-[14px] text-justify 
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">User:</h1>
+                        <img className="w-12 h-12 rounded-full bg-cover" src={photo} alt="User" />
+                        <p className="text-[14px] text-justify mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">{admin_id}❤️</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <h1>Hashtags:</h1>
-                        <a href="#">{tags}</a>
+                        <h1 className="text-[14px] text-justify mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">Hashtags:</h1>
+                        <a className=" underline text-indigo-500 text-[14px] mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]" href="#">{tags}</a>
                     </div>
                     <div className="flex flex-col items-center">
-                        <h1>Duration:</h1>
-                        <p>{duration}Min</p>
+                        <h1 className="text-[14px] text-justify mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">Duration:</h1>
+                        <p className="text-[14px] text-justify mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">{duration}Min</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <h1>Price:</h1>
-                        <p>{"💵".repeat(price)}</p>
+                        <h1 className="text-[14px] text-justify mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">Price:</h1>
+                        <p className="text-[14px] text-justify mb-10
+            md:text-[16px]
+            lg:text-[18px]
+            xl:text-[20px]">{"💵".repeat(price)}</p>
                     </div>
                 </div>
 
             </div>
 
-            <div className="flex flex-row justify-between my-4">
+
+            <div className="flex flex-row justify-between my-4 mx-3">
                 <div className="flex flex-row flex-start">
                     {like ?
                         (<svg onClick={() => setLike(!like)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" className="w-6 h-6 cursor-pointer">
@@ -69,7 +98,7 @@ export default function ItinerariesCard({  photo, src, alt, text, price, duratio
 
             </div>
 
-            {show && <ItinerariesDetail />}
+            {show && <ItinerariesDetail itinerary_id={_id}/>}
         </div>
     )
 }
