@@ -10,7 +10,7 @@ export default function ItinerariesDetail({ itinerary_id }) {
         <div className="flex flex-col items-center">
             <div>
             
-                <h1 className="text-[14px] text-justify mb-10
+                <h1 className="text-center text-[14px] text-justify mb-10
             md:text-[16px]
             lg:text-[18px]
             xl:text-[20px]">Activities:</h1>
