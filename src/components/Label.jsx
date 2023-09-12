@@ -39,17 +39,15 @@ export default function Label({ options }) {
             )
       )}
       {photo && ( 
-        <img 
-          src={photo}
-          className="h-[50px] w-[50px] object-cover p-1 bg-gradient-to-r from-green-400 to-blue-500  w-[150px] h-[150px] object-cover rounded-full mx-1 hidden lg:flex"
-        />
+        <div>
+          <Anchor to={"/profile"} className=" flex flex-row items-center justify-center">
+            <img className=" w-[50px] rounded-full" src={photo} alt="Photo User" />
+            <p className=" p-1 font-bold text-[14px]">Hola,👋 {name}!</p>
+          </Anchor>
+        </div>
+      
       )}
-  <h2 className="text-[14px] font-bold
-          md:flex
-          md:text-[24px]
-          lg:text-[24 px]
-          xl:text-[24px]">
-      {name}</h2>
+ 
       
     </div>
   );
