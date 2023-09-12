@@ -51,7 +51,7 @@ export default function Form() {
         title: "User registered!",
         text: "👏Now log in ;)"
       });
-      navigate("/");
+      navigate("/auth/signin");
      {/*navigate("/auth/signin")*/} 
     } catch (error) {
       let faild = error.response.data.messages 

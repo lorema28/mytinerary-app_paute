@@ -22,7 +22,7 @@ export default function NavBar() {
    let dispatch = useDispatch();
 
    let options = [
-    { to: "/", title: "Home",show: photo? true : false,},
+    { to: "/", title: "Home", show: true },
     { to: "/cities", title: "Cities", show: photo? true : false,},
      {to: "/profile",title: "Profile", show: photo? true : false,},
      {to: "/auth/signin", title: <Login/>,color: "white", backgroundColor:"#4F46E5",
