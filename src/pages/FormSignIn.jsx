@@ -41,7 +41,8 @@ export default function SignIn() {
   let user = useSelector((store) => store);
   return (
  
-    <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white m-auto shadow rounded-lg">
+    <div className="flex justify-around my-5">
+    <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white  shadow rounded-lg">
       <h1 className="text-[36px] font-bold text-center mb-[10px]">Sign In!</h1>
       <input
         ref={mail_signin}
@@ -95,6 +96,6 @@ export default function SignIn() {
         </Anchor>
       </p>
     </form>
-   
+   </div>
   );
 }
