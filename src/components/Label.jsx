@@ -40,7 +40,7 @@ export default function Label({ options }) {
       )}
       {photo && ( 
         <div>
-          <Anchor to={"/profile"} className=" flex flex-row items-center justify-center">
+          <Anchor to={"/profile"} className=" flex flex-row items-center justify-center  hover:bg-gray-400 rounded xl">
             <img className=" w-[50px] rounded-full" src={photo} alt="Photo User" />
             <p className=" p-1 font-bold text-[14px]">Hola,👋 {name}!</p>
           </Anchor>
