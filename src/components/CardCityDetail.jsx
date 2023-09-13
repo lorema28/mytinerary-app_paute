@@ -41,7 +41,15 @@ export default function CardCityDetail({  id }) {
                     _id={each._id}
                     />)):(
                         
-                        <h1><em>There are no itineraries to show</em></h1> 
+                        <div className="text-center text-gray-600 items-center my-2">
+                          <iframe src="https://giphy.com/embed/nR4L10XlJcSeQ" 
+                          width="300" 
+                          height="300" 
+                          class="giphy-embed" 
+                          allowFullScreen>
+                            </iframe><p className=" font-bold text center"><a href="https://giphy.com/gifs/no-cat-nR4L10XlJcSeQ">There are no itineraries to show</a></p>
+                        
+                        </div>
                      ))}
         </div>
     )
