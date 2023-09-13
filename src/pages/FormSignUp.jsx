@@ -157,7 +157,7 @@ export default function Form() {
       </p>
     </form>
     <div>
-      <h1  className="text-[36px] font-bold text-center mb-[10px] text-purple-800 " >Join our community!!</h1>
+   
     <Users/>
     </div>
 </div>
@@ -173,3 +173,6 @@ export default function Form() {
 //defaultValue=""
 //placeholder="Your country*"
 ///>
+
+
+

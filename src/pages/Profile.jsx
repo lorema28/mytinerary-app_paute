@@ -3,6 +3,7 @@ import UserData from "../components/UserData";
 import { useDispatch, useSelector } from "react-redux";
 import user_actions from "../store/actions/users";
 const { update_user } = user_actions;
+import Swal from "sweetalert2";
 
 export default function Profile() {
   const user = useSelector((store) => store.users.user);
@@ -32,12 +33,17 @@ export default function Profile() {
       if (password.current.value) {
         data.password = password.current.value;
       }
-      //console.log(data);
-      dispatch(update_user({ data }));
-    } catch (error) {
-      console.log(error);
-    }
+      dispatch(update_user({data}))
+      .then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "User Updated!",
+          })});
   }
+  catch (error) {
+    console.log(error);
+  }
+}
   return (
     <div className="flex flex-col flex-grow items-center justify-center  md:flex-row md:justify-evenly">
       <UserData user={user} show={show} setShow={setShow} />
