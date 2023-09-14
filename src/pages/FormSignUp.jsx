@@ -7,6 +7,7 @@ import { Link as Anchor, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import user_actions from "../store/actions/users"
+import Google from "../components/Google";
 const { read_6_users } = user_actions
 
 export default function Form() {
@@ -49,7 +50,7 @@ export default function Form() {
       Swal.fire({
         icon: "success",
         title: "User registered!",
-        text: "👏Now log in ;)"
+        text: "👏Now log in!"
       });
       navigate("/auth/signin");
      {/*navigate("/auth/signin")*/} 
@@ -146,6 +147,7 @@ export default function Form() {
         value="Sign Up!"
         onClick={handleSignUp}
       />
+      <Google/>
       <p>
         Already have an account?{" "}
         <Anchor
